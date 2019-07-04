@@ -126,6 +126,7 @@ public:
 			*(p) = *(p + 1);
 		}
 		length--;//length减1就行，最后一位不管是什么。
+		return true;
 	}
 	//遍历元素
 	void ListTraverse(void(*visit)(T*)) const;
