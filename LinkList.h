@@ -37,11 +37,50 @@ public:
 		return  Head->next == NULL;
 	}
 	int ListLength() const {
+		//Ñ­»·Ò»±é
 		int i = 0;
 		LNode<T> *p = Head->next;
 		while (p != NULL) {
 			p = p->next;
+			i++;
 		}
+		return i;
+	}
+	bool GetElem(int i, T&e) const
+	{
+		LNode<T> * p;
+		p = Head;
+		for (int j = 0; j < i; ++j) {
+			if (p->next == NULL) {
+				return false;
+			}
+			p = p->next;
+		}
+		e = p->data;
+		return true;
+	}
+	int LocateElem(T e, bool(*eq)(T, T)) const
+	{
+
+	}
+	bool PriorElem(T e, bool(*eq)(T, T), T & pre_e)const
+	{
+
+	}
+	bool NextElem(T e, bool(*eq)(T, T), T&next_e)const
+	{
+
+	}
+	bool ListInsert(int i, T e) {
+
+	}
+	bool ListDelete(int i, T&e)const
+	{
+
+	}
+	void ListTraverse(void(*visit)(T*)) const {
+
 	}
 };
+
 #endif // !_LINKLIST_H_
